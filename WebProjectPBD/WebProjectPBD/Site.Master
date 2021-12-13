@@ -10,15 +10,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Overview</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Functions</a></li>
-        </ul>
-    </header>
-</div>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
