@@ -85,6 +85,15 @@
                 <asp:Parameter Name="Id_joc" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-
+    </div>
+    <div class="container">
+        <h2>Optiuni</h2>
+        <div class="row">
+            <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Afisare conditionata" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary" Text="Sortare crescator" />
+        </div>
+        <div class="container">
+            <asp:Table ID="Table1" runat="server"></asp:Table>
+        </div>
     </div>
 </asp:Content>
