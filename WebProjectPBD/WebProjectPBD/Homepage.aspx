@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h5 class="card-title">Table</h5>
                 <p class="card-text">Înregistreză următorul joc de table.</p>
-                <a href="Table.aspx" class="btn btn-primary">Către table</a>
+                <a href="Table.aspx" class="btn btn-primary">Start joc</a>
             </div>
         </div>
         
@@ -26,7 +26,7 @@
             <div class="card-body">
                 <h5 class="card-title">Șah</h5>
                 <p class="card-text">Înregistrează următorul jocul de șah</p>
-                <a href="Sah.aspx" class="btn btn-primary">Către șah</a>
+                <a href="Sah.aspx" class="btn btn-primary">Start joc</a>
             </div>
         </div>
     </div>
