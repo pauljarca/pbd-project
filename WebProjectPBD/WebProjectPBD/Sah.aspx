@@ -11,7 +11,45 @@
         </header>
     </div>
     <div class="container">
+     <div class="row" >
+         <div class="col">
+            <img src="https://images.unsplash.com/photo-1602968407815-5963b28c66af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" style="width: 50%;">
+            <div class="card-body">
+                <h5 class="card-title">Șah</h5>
+                <p class="card-text">Înregistrează următorul jocul de șah</p>
+               <p class="card-text">
+                    <asp:Label ID="Label3" runat="server" Font-Size="Large" Text="Jucator 1"></asp:Label>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label1" runat="server" Text="Nume"></asp:Label>
+                    <asp:TextBox ID="Nume1_tb" runat="server"></asp:TextBox>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label2" runat="server" Text="Data nasterii"></asp:Label>
+                    <asp:TextBox ID="DataNasterii1_tb" runat="server"></asp:TextBox>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label4" runat="server" Font-Size="Large" Text="Jucator 2"></asp:Label>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label5" runat="server" Text="Nume"></asp:Label>
+                    <asp:TextBox ID="Nume2_tb" runat="server"></asp:TextBox>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label6" runat="server" Text="Data nasterii"></asp:Label>
+                    <asp:TextBox ID="DataNasterii2_tb" runat="server"></asp:TextBox>
+                </p>
+                <p class="card-text">
+                    <asp:Label ID="Label7" runat="server" Text="Numar total de runde"></asp:Label>
+                    <asp:TextBox ID="NrRunde_tb" runat="server"></asp:TextBox>
+                </p>
+                <p class="card-text">
+                    <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul" class="btn btn-primary" />
+                </p>
 
+            </div>
+             </div>
 
-    </div>
+        </div>
+        </div>
 </asp:Content>
