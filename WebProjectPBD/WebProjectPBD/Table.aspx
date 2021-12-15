@@ -26,7 +26,7 @@
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label2" runat="server" Text="Data nasterii"></asp:Label>
-                    <asp:TextBox ID="DataNasterii1_tb" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="DataNasterii1_tb" TextMode="Date" runat="server"></asp:TextBox>
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label4" runat="server" Font-Size="Large" Text="Jucator 2"></asp:Label>
@@ -37,7 +37,7 @@
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label6" runat="server" Text="Data nasterii"></asp:Label>
-                    <asp:TextBox ID="DataNasterii2_tb" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="DataNasterii2_tb" TextMode="Date" runat="server"></asp:TextBox>
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label7" runat="server" Text="Numar total de runde"></asp:Label>
