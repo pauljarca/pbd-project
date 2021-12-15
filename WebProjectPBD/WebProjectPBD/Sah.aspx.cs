@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Web;
-using System.Web.Services.Description;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WebProjectPBD
 {
@@ -18,6 +16,8 @@ namespace WebProjectPBD
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
 
         }
 
