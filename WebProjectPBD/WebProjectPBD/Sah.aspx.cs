@@ -10,7 +10,7 @@ namespace WebProjectPBD
 {
     public partial class Sah : System.Web.UI.Page
     {
-        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Info An 3\PBD\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
+        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\FAC\pbd\cod\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
         SqlConnection sqlConn = new SqlConnection(connString);
         SqlCommand cmd;
 
@@ -39,18 +39,33 @@ namespace WebProjectPBD
                 cmd.Parameters.AddWithValue("@nume", Nume1_tb.Text.Trim());
                 cmd.Parameters.AddWithValue("@data_n", Convert.ToDateTime(DataNasterii1_tb.Text));
 
-                cmd.Parameters.AddWithValue("@data_i", DateTime.Now.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@data_i", DateTime.Now.ToString("yyyy/MM/dd"));
 
                 cmd.ExecuteNonQuery();
 
                 cmd = new SqlCommand("insert into Jucatori (Nume,Data_nasterii,Data_inregistrarii) values (@nume1,@data_n1,@data_i1)", sqlConn);
                 cmd.Parameters.AddWithValue("@nume1", Nume2_tb.Text.Trim());
                 cmd.Parameters.AddWithValue("@data_n1", Convert.ToDateTime(DataNasterii1_tb.Text));
-                cmd.Parameters.AddWithValue("@data_i1", DateTime.Now.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@data_i1", DateTime.Now.ToString("yyyy/MM/dd"));
+
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("insert into Joc (Tip_joc,Jucator1,Jucator2,Partida_curenta,Partida_totala,Data_inceput_joc,Scor_jucator1,Scor_jucator2) values (@tip,@nume,@nume1,@partida_cur,@partida_tot,@data_i_j,@scor_j1,@scor_j2)", sqlConn);
+                cmd.Parameters.AddWithValue("@tip", "0");
+                cmd.Parameters.AddWithValue("@nume", Nume1_tb.Text.Trim());
+                cmd.Parameters.AddWithValue("@nume1", Nume2_tb.Text.Trim());
+                cmd.Parameters.AddWithValue("@partida_cur", "0");
+                cmd.Parameters.AddWithValue("@partida_tot", NrRunde_tb.Text.Trim());
+                cmd.Parameters.AddWithValue("@data_i_j", DateTime.Now.ToString("yyyy/MM/dd"));
+                cmd.Parameters.AddWithValue("@scor_j1", "0");
+                cmd.Parameters.AddWithValue("@scor_j2", "0");
 
                 cmd.ExecuteNonQuery();
 
                 sqlConn.Close();
+
+                Response.Redirect("JocActiv.aspx");
+
             }
         }
 

@@ -18,6 +18,9 @@
                 <h5 class="card-title">Table</h5>
                 <p class="card-text">Înregistrează următorul jocul de table</p>
                 <p class="card-text">
+                    <asp:Label ID="Label8" runat="server" Font-Bold="True" ForeColor="#FF5050" Text="Label" Visible="False"></asp:Label>
+                </p>
+                <p class="card-text">
                     <asp:Label ID="Label3" runat="server" Font-Size="Large" Text="Jucator 1"></asp:Label>
                 </p>
                 <p class="card-text">
@@ -44,7 +47,7 @@
                     <asp:TextBox ID="NrRunde_tb" runat="server"></asp:TextBox>
                 </p>
                 <p class="card-text">
-                    <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul"  class="btn btn-primary"/>
+                    <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul"  class="btn btn-primary" OnClick="IncepeJoc_btn_Click" />
                 </p>
             </div>
              </div>

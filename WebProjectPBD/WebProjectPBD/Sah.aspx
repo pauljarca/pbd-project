@@ -29,7 +29,7 @@
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label2" runat="server" Text="Data nasterii"></asp:Label>
-                    <asp:TextBox ID="DataNasterii1_tb" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="DataNasterii1_tb" runat="server" TextMode="Date"></asp:TextBox>
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label4" runat="server" Font-Size="Large" Text="Jucator 2"></asp:Label>
@@ -40,7 +40,7 @@
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label6" runat="server" Text="Data nasterii"></asp:Label>
-                    <asp:TextBox ID="DataNasterii2_tb" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="DataNasterii2_tb" runat="server" TextMode="Date"></asp:TextBox>
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label7" runat="server" Text="Numar total de runde"></asp:Label>
@@ -52,7 +52,7 @@
                                                 ControlToValidate="NrRunde_tb" ErrorMessage="Nu ati ales numarul de runde."/>
                 </p>
                 <p class="card-text">
-                    <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul" class="btn btn-primary" OnClick="IncepeJoc_btn_Click" />
+                    <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul" class="btn btn-primary" OnClick="IncepeJoc_btn_Click"  />
                 </p>
                 
 
