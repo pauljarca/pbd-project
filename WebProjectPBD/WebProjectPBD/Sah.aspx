@@ -17,6 +17,9 @@
             <div class="card-body">
                 <h5 class="card-title">Șah</h5>
                 <p class="card-text">Înregistrează următorul jocul de șah</p>
+                <p class="card-text">
+                    <asp:Label ID="Label8" runat="server" Text="Label" Visible="False" Font-Bold="True" ForeColor="#FF5050"></asp:Label>
+                </p>
                <p class="card-text">
                     <asp:Label ID="Label3" runat="server" Font-Size="Large" Text="Jucator 1"></asp:Label>
                 </p>
@@ -41,14 +44,17 @@
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label7" runat="server" Text="Numar total de runde"></asp:Label>
-                    <asp:TextBox ID="NrRunde_tb" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="NrRunde_tb" TextMode="Number" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"   
+                                                    ControlToValidate="NrRunde_tb" ErrorMessage="Introduceti numar par"   
+                                                    ValidationExpression="^[0-9]*[13579]$"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                                ControlToValidate="NrRunde_tb" ErrorMessage="Nu ati ales numarul de runde."/>
                 </p>
                 <p class="card-text">
                     <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul" class="btn btn-primary" OnClick="IncepeJoc_btn_Click" />
                 </p>
-                <p class="card-text">
-                    <asp:Label ID="Label8" runat="server" Text="Label" Visible="False"></asp:Label>
-                </p>
+                
 
             </div>
              </div>

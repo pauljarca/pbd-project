@@ -12,18 +12,15 @@ namespace WebProjectPBD
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/scripts/jquery-1.7.2.min.js",
+                    DebugPath = "~/scripts/jquery-1.7.2.js",
+                    CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.min.js",
+                    CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.js"
+                });
         }
     }
 
-    public static class MessageBox
-    {
-        public static void Show(this Page Page, String Message)
-        {
-            Page.ClientScript.RegisterStartupScript(
-                Page.GetType(),
-                "MessageBox",
-                "<script language='javascript'>alert('" + Message + "');</script>"
-            );
-        }
-    }
 }
