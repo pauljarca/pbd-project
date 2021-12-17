@@ -90,10 +90,13 @@
         <h2>Optiuni</h2>
         <div class="row">
             <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Afisare conditionata" />
-            <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary" Text="Sortare crescator" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary" Text="Sortare crescator" OnClick="Button2_Click" />
         </div>
         <div class="container">
             <asp:Table ID="Table1" runat="server"></asp:Table>
+            <asp:GridView ID="GridView3" runat="server">
+            </asp:GridView>
+            <br />
         </div>
     </div>
 </asp:Content>
