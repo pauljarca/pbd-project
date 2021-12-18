@@ -8,6 +8,7 @@ using System.Web.UI;
 
 namespace WebProjectPBD
 {
+
     public class Global : System.Web.HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
@@ -21,6 +22,8 @@ namespace WebProjectPBD
                     CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.1.js"
                 });
         }
+        public string path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Info An 3\PBD\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
+
     }
 
 }
