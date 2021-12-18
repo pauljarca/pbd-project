@@ -10,7 +10,7 @@ namespace WebProjectPBD
 {
     public partial class Sah : System.Web.UI.Page
     {
-        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\FAC\pbd\cod\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
+        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Info An 3\PBD\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
         SqlConnection sqlConn = new SqlConnection(connString);
         SqlCommand cmd;
 
@@ -68,7 +68,6 @@ namespace WebProjectPBD
 
             }
         }
-
 
     }
 }
