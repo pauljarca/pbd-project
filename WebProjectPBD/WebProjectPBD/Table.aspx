@@ -6,7 +6,7 @@
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="Homepage.aspx" class="nav-link active" aria-current="page">Overview</a></li>
-                <li class="nav-item"><a href="Functions.aspx" class="nav-link">Functions</a></li>
+                <li class="nav-item"><a href="Functions3.aspx" class="nav-link">Functions</a></li>
             </ul>
         </header>
     </div>
@@ -45,6 +45,11 @@
                 <p class="card-text">
                     <asp:Label ID="Label7" runat="server" Text="Numar total de runde"></asp:Label>
                     <asp:TextBox ID="NrRunde_tb" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server"   
+                                                    ControlToValidate="NrRunde_tb" ErrorMessage="Introduceti numar impar"   
+                                                    ValidationExpression="^[0-9]*[13579]$"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                                ControlToValidate="NrRunde_tb" ErrorMessage="Nu ati ales numarul de runde."/>
                 </p>
                 <p class="card-text">
                     <asp:Button ID="IncepeJoc_btn" runat="server" Text="Incepe jocul"  class="btn btn-primary" OnClick="IncepeJoc_btn_Click" />

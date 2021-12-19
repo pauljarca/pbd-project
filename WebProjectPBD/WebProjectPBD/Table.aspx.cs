@@ -32,6 +32,11 @@ namespace WebProjectPBD
                 Label8.Text = "Mai verifica data nasterii la unul din cei doi jucatori";
                 Label8.Visible = true;
             }
+            else if (NrRunde_tb.Text == "" || Int32.Parse(NrRunde_tb.Text.ToString()) % 2 == 0) 
+            {
+                Label8.Text = "Numarul de runde trebuie sa fie impar.";
+                Label8.Visible = true;
+            }
             else
             {
                 sqlConn.Open();
@@ -39,14 +44,14 @@ namespace WebProjectPBD
                 cmd.Parameters.AddWithValue("@nume", Nume1_tb.Text.Trim());
                 cmd.Parameters.AddWithValue("@data_n", Convert.ToDateTime(DataNasterii1_tb.Text));
 
-                cmd.Parameters.AddWithValue("@data_i", DateTime.Now.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@data_i", DateTime.Now);
 
                 cmd.ExecuteNonQuery();
 
                 cmd = new SqlCommand("insert into Jucatori (Nume,Data_nasterii,Data_inregistrarii) values (@nume1,@data_n1,@data_i1)", sqlConn);
                 cmd.Parameters.AddWithValue("@nume1", Nume2_tb.Text.Trim());
                 cmd.Parameters.AddWithValue("@data_n1", Convert.ToDateTime(DataNasterii1_tb.Text));
-                cmd.Parameters.AddWithValue("@data_i1", DateTime.Now.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@data_i1", DateTime.Now);
 
                 cmd.ExecuteNonQuery();
 
@@ -56,7 +61,7 @@ namespace WebProjectPBD
                 cmd.Parameters.AddWithValue("@nume1", Nume2_tb.Text.Trim());
                 cmd.Parameters.AddWithValue("@partida_cur", "0");
                 cmd.Parameters.AddWithValue("@partida_tot", NrRunde_tb.Text.Trim());
-                cmd.Parameters.AddWithValue("@data_i_j", DateTime.Now.ToString("yyyy/MM/dd"));
+                cmd.Parameters.AddWithValue("@data_i_j", DateTime.Now);
                 cmd.Parameters.AddWithValue("@scor_j1", "0");
                 cmd.Parameters.AddWithValue("@scor_j2", "0");
 
