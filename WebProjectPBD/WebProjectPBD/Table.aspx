@@ -26,6 +26,7 @@
                 <p class="card-text">
                     <asp:Label ID="Label1" runat="server" Text="Nume"></asp:Label>
                     <asp:TextBox ID="Nume1_tb" runat="server"></asp:TextBox>
+                    <asp:Button ID="CautaJucator1_btn" runat="server"  class="btn btn-secondary" Text="Cautare jucator" OnClick="CautaJucator1_btn_Click" />
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label2" runat="server" Text="Data nasterii"></asp:Label>
@@ -37,6 +38,7 @@
                 <p class="card-text">
                     <asp:Label ID="Label5" runat="server" Text="Nume"></asp:Label>
                     <asp:TextBox ID="Nume2_tb" runat="server"></asp:TextBox>
+                    <asp:Button ID="CautareJucator2_btn" runat="server"  class="btn btn-secondary" Text="Cautare jucator" OnClick="CautaJucator2_btn_Click" />
                 </p>
                 <p class="card-text">
                     <asp:Label ID="Label6" runat="server" Text="Data nasterii"></asp:Label>

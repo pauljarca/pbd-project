@@ -51,6 +51,15 @@ namespace WebProjectPBD
         protected global::System.Web.UI.WebControls.TextBox Nume1_tb;
 
         /// <summary>
+        /// CautaJucator1_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CautaJucator1_btn;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -96,6 +105,15 @@ namespace WebProjectPBD
         protected global::System.Web.UI.WebControls.TextBox Nume2_tb;
 
         /// <summary>
+        /// CautareJucator2_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CautareJucator2_btn;
+
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +148,24 @@ namespace WebProjectPBD
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NrRunde_tb;
+
+        /// <summary>
+        /// RegularExpressionValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
+
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// IncepeJoc_btn control.

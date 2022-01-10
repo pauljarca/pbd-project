@@ -71,15 +71,22 @@
     <Content Include="App_Data\db_log.ldf">
       <DependentUpon>db.mdf</DependentUpon>
     </Content>
+    <Content Include="Functions3.aspx" />
     <Content Include="Global.asax" />
     <Content Include="JocActiv.aspx" />
     <Content Include="Sah.aspx" />
     <Content Include="Table.aspx" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
-    <Content Include="Functions.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Functions3.aspx.cs">
+      <DependentUpon>Functions3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Functions3.aspx.designer.cs">
+      <DependentUpon>Functions3.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -111,13 +118,6 @@
     </Compile>
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Functions.aspx.cs">
-      <DependentUpon>Functions.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Functions.aspx.designer.cs">
-      <DependentUpon>Functions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Table.aspx.cs">
       <DependentUpon>Table.aspx</DependentUpon>

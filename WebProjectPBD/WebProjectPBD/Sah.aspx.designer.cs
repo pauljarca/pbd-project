@@ -51,6 +51,15 @@ namespace WebProjectPBD
         protected global::System.Web.UI.WebControls.TextBox Nume1_tb;
 
         /// <summary>
+        /// CautaJucator1_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CautaJucator1_btn;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace WebProjectPBD
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Nume2_tb;
+
+        /// <summary>
+        /// CautaJucator2_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CautaJucator2_btn;
 
         /// <summary>
         /// Label6 control.

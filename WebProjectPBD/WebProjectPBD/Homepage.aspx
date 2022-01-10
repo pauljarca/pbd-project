@@ -7,7 +7,7 @@
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Overview</a></li>
-                <li class="nav-item"><a href="Functions.aspx" class="nav-link">Functions</a></li>
+                <li class="nav-item"><a href="Functions3.aspx" class="nav-link">Functions</a></li>
             </ul>
         </header>
     </div>

@@ -11,7 +11,7 @@ namespace WebProjectPBD
 {
     public partial class JocActiv : System.Web.UI.Page
     {
-        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\FAC\pbd\cod\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
+        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Info An 3\PBD\pbd-project\WebProjectPBD\WebProjectPBD\App_Data\db.mdf;Integrated Security=True";
         SqlConnection sqlConn = new SqlConnection(connString);
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -66,14 +66,15 @@ namespace WebProjectPBD
             ScorJucator1_lb.Text = n_scor1.ToString();
             if (n_partida_curenta >= n_partida)
             {
-
-               
-                
-
                 winner_lbl.Visible = true;
                 Button1.Visible = true;
                 Jucator1_btn.Visible = false;
                 Jucator2_btn.Visible = false;
+                cmd = new SqlCommand("UPDATE Jucatori SET Partide_jucate=Partide_jucate+1 WHERE Nume=@nume1;" +
+                                     "UPDATE Jucatori SET Partide_jucate=Partide_jucate+1 WHERE Nume=@nume2;", sqlConn);
+                cmd.Parameters.Add("@nume1", Label1.Text);
+                cmd.Parameters.Add("@nume2", Label2.Text);
+                cmd.ExecuteNonQuery();
 
                 if (n_scor1 > n_scor2)
                 {
@@ -85,14 +86,17 @@ namespace WebProjectPBD
                     id_invingator = Int32.Parse(reader["Id"].ToString());
                     reader.Close();
                     cmd4.ExecuteNonQuery();
-
-
                     cmd2 = new SqlCommand("UPDATE Joc SET Data_sfarsit_joc=@data_s,Id_invingator=@id_i WHERE Id_joc=@id ", sqlConn);
                     cmd2.Parameters.AddWithValue("@data_s", DateTime.Now);
                     cmd2.Parameters.AddWithValue("@id_i", id_invingator.ToString());
                     cmd2.Parameters.AddWithValue("@id", id_joc.ToString());
                     cmd2.ExecuteNonQuery();
                     winner_lbl.Text = "Jocul s-a terminat! " + Convert.ToString(Label1.Text) + " a castigat!";
+                    cmd = new SqlCommand(
+                        "UPDATE Jucatori SET Partide_castigate=Partide_castigate+1 WHERE Id=@id",
+                        sqlConn);
+                    cmd.Parameters.Add("@id", id_invingator);
+                    cmd.ExecuteNonQuery();
                 }
                 else
                 {
@@ -112,13 +116,20 @@ namespace WebProjectPBD
                     cmd2.Parameters.AddWithValue("@id", id_joc.ToString());
                     cmd2.ExecuteNonQuery();
                     winner_lbl.Text = "Jocul s-a terminat! " + Convert.ToString(Label2.Text) + " a castigat!";
+                    cmd = new SqlCommand(
+                        "UPDATE Jucatori SET Partide_castigate=Partide_castigate+1 WHERE Id=@id",
+                        sqlConn);
+                    cmd.Parameters.Add("@id", id_invingator);
+                    cmd.ExecuteNonQuery();
                 }
+                sqlConn.Close();
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("JocActiv.aspx");
+            sqlConn.Close();
+            Response.Redirect("Homepage.aspx");
         }
 
         protected void Jucator2_btn_Click(object sender, EventArgs e)
@@ -138,6 +149,11 @@ namespace WebProjectPBD
                 Button1.Visible = true;
                 Jucator1_btn.Visible = false;
                 Jucator2_btn.Visible = false;
+                cmd = new SqlCommand("UPDATE Jucatori SET Partide_jucate=Partide_jucate+1 WHERE Nume=@nume1;" +
+                                     "UPDATE Jucatori SET Partide_jucate=Partide_jucate+1 WHERE Nume=@nume2;",sqlConn);
+                cmd.Parameters.Add("@nume1", Label1.Text.Trim());
+                cmd.Parameters.Add("@nume2", Label2.Text.Trim());
+                cmd.ExecuteNonQuery();
                 if (n_scor2 > n_scor1)
                 {
                     cmd4 = new SqlCommand("SELECT * FROM Jucatori WHERE Nume=@nume", sqlConn);
@@ -156,6 +172,11 @@ namespace WebProjectPBD
                     cmd2.Parameters.AddWithValue("@id", id_joc.ToString());
                     cmd2.ExecuteNonQuery();
                     winner_lbl.Text = "Jocul s-a terminat! " + Convert.ToString(Label2.Text) + " a castigat!";
+                    cmd = new SqlCommand(
+                        "UPDATE Jucatori SET Partide_castigate=Partide_castigate+1 WHERE Id=@id",
+                        sqlConn);
+                    cmd.Parameters.Add("@id", id_invingator);
+                    cmd.ExecuteNonQuery();
                 }
                 else
                 {
@@ -175,8 +196,14 @@ namespace WebProjectPBD
                     cmd2.Parameters.AddWithValue("@id", id_joc.ToString());
                     cmd2.ExecuteNonQuery();
                     winner_lbl.Text = "Jocul s-a terminat! " + Convert.ToString(Label1.Text) + " a castigat!";
-                }
+                    cmd = new SqlCommand(
+                        "UPDATE Jucatori SET Partide_castigate=Partide_castigate+1 WHERE Id=@id",
+                        sqlConn);
+                    cmd.Parameters.Add("@id", id_invingator);
+                    cmd.ExecuteNonQuery();
 
+                }
+                sqlConn.Close();
             }
         }
     }
